@@ -195,6 +195,8 @@ flutter:
   - images/image1.gif
   - images/jd.jpg
   - images/sh.jpg
+  - images/loc.png
+  - images/menu.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

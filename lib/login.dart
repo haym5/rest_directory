@@ -10,7 +10,7 @@ class LoginPage extends StatelessWidget {
       appBar: AppBar(
          backgroundColor: Colors.blueGrey,
        
-        title: Text('Restaurant directory',style: TextStyle( color:Colors.white),),),
+        title: Text('Restaurant Directory',style: TextStyle( color:Colors.white),),),
        
         body:Container(    
           color: Colors.white,
@@ -27,7 +27,7 @@ class LoginPage extends StatelessWidget {
           height:300,
           fit: BoxFit.contain,
           ),
-            Text('Restaurant directory',style: TextStyle(fontSize: 25,
+            Text('Restaurant Directory',style: TextStyle(fontSize: 25,
             fontWeight: FontWeight.bold,
             color:Colors.blueGrey),),
 

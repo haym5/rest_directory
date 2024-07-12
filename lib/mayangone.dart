@@ -13,49 +13,48 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home:sanchaung(),
+      home:mayangone(),
     );
   }
 }
 
-class sanchaung extends StatefulWidget {
+class mayangone extends StatefulWidget {
   @override
-  _sanchaungState createState() => _sanchaungState();
+  _mayangoneState createState() => _mayangoneState();
 }
 
-class _sanchaungState extends State<sanchaung> {
-  final List<Sanres> cusines = [
+class _mayangoneState extends State<mayangone> {
+  final List<manres> cusines = [
        
-       Sanres(
-      name: 'Pork Queen Restaurant',
-      image: AssetImage("images/pork.jpg"),
-      address:'Add:11111,Shin Sawpu Pagoda St,Sanchaung,Yangon',
-      phone:'Tel:+959 754 628 018',
+      manres(
+      name: 'Jeff Kitchen',
+      image: AssetImage("images/jef.jpg"),
+      address:'Add:4A,Kan Yeik Thar Street,Chaw Twin Gone,Mayangone ,Yangon',
+      phone:'Tel:+959 265 900 056',
       ),
-    
-       Sanres(
-      name: 'Sopyae Shan Noodle Restaurant',
-      image: AssetImage("images/shan7.jpg"),
-      address:'Add:No. 26, Shan Kone Street ,SanChaung , Yangon',
-      phone:'Tel:+959 772 523139',
+       manres(
+      name: 'Pyone Pann Tayar',
+      image: AssetImage("images/mano.jpg"),
+      address:'Add:J, Gant Gaw St., Bayint Naung Warehouses, Mayangone Township, Yangon',
+      phone:'Tel:+959  261113151',
       ),
-      Sanres(
-      name: 'Xi Yang Yang',
-      image: AssetImage("images/xi1.jpg"),
+      manres(
+      name: 'Saemaul',
+      image: AssetImage("images/ko1.jpg"),
       address:'Add:No.14,Nyaung Tong Rd,SanChaung Township,Yangon',
-      phone:'Tel:+951 502 582',    
+      phone:'Tel:+959448638254',    
     ),
-      Sanres(
-      name: 'Swel Restaurant',
-      image: AssetImage("images/sh.jpg"),
-      address:'Add:No 7 Sanchaung Township, Baho Rd, Yangon 11111',
-      phone:'Tel:09 881 507700',    
+     manres(
+      name: 'Sar Bar Sar Bar',
+      image: AssetImage("images/new.jpg"),
+      address:'Add:SH/01, Kyun Shwe Wah St., Bayint Naung Warehouses, Mayangone Township, Yangon ',
+      phone:'Tel:  09-5154563',    
     ),
-     Sanres(
-      name: 'Sumlut Sisters BBQ',
-      image: AssetImage("images/min.jpg"),
-      address:'Add:13 Sanchaung St, Yangon',
-      phone:'Tel: 09 762 502990',    
+     manres(
+      name: 'Sein Family',
+      image: AssetImage("images/ind6.jpg"),
+      address:'Add:22 Shed, Rm 33/34, Bayint Naung Market, Mayangone Township, Yangon',
+      phone:'Tel:  09-73157986',    
     ),
 
   ];
@@ -122,7 +121,7 @@ class _sanchaungState extends State<sanchaung> {
 }
 
 class ItemDetailsPage extends StatelessWidget {
-  final Sanres item;
+  final manres item;
 
   const ItemDetailsPage({required this.item});
 
@@ -138,7 +137,7 @@ class ItemDetailsPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[          
               
-               if  (item.name == 'Pork Queen Restaurant')
+               if  (item.name == 'Jeff Kitchen')
               Container(
                 width: 300,
                 height: 300,
@@ -158,7 +157,7 @@ class ItemDetailsPage extends StatelessWidget {
                   ],
                 ),
               )
-              else if  (item.name == 'Sopyae Shan Noodle Restaurant')
+              else if  (item.name == 'Pyone Pann Tayar')
               Container(
                 width: 300,
                 height: 300,
@@ -178,7 +177,7 @@ class ItemDetailsPage extends StatelessWidget {
                   ],
                 ),
               )
-               else if  (item.name == 'Xi Yang Yang')
+               else if  (item.name == 'Saemaul')
               Container(
                 width: 300,
                 height: 300,
@@ -198,7 +197,7 @@ class ItemDetailsPage extends StatelessWidget {
                   ],
                 ),
               )
-             else if  (item.name == 'Swel Restaurant')
+             else if  (item.name == 'Sar Bar Sar Bar')
               Container(
                 width: 300,
                 height: 300,
@@ -218,7 +217,7 @@ class ItemDetailsPage extends StatelessWidget {
                   ],
                 ),
               )
-              else if  (item.name == 'Sumlut Sisters BBQ')
+              else if  (item.name == 'Sein Family')
               Container(
                 width: 300,
                 height: 300,
@@ -253,13 +252,13 @@ class ItemDetailsPage extends StatelessWidget {
   }
 }
 
-class Sanres {
+class manres {
   final String name;
   final ImageProvider image;
    final String address;
   final String phone;
 
-  Sanres({
+  manres({
     required this.name,
     required this.address,
     required this.image,

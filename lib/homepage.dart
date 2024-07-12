@@ -6,10 +6,12 @@ import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:restaurant/About.dart';
 import 'package:restaurant/All.dart';
+
 import 'package:restaurant/Cusines.dart';
 import 'package:restaurant/Donut.dart';
 import 'package:restaurant/Yoeyar..dart';
 import 'package:restaurant/device.dart';
+
 import 'package:restaurant/feedback.dart';
 import 'package:restaurant/itempage.dart';
 import 'package:restaurant/lotteria.dart';
@@ -17,29 +19,34 @@ import 'package:restaurant/main.dart';
 import 'package:restaurant/mugunghwa.dart';
 import 'package:restaurant/oishii.dart';
 import 'package:restaurant/pizza.dart';
+
 import 'package:restaurant/review.dart';
 
 
 
-void main() => runApp(GetMaterialApp(home: Home()));
 
 class Home extends StatelessWidget{
 
+   final String userName;
+   final String userEmail;
+
+   Home({required this.userName, required this.userEmail});
+
    Widget build(BuildContext context) {
     return Scaffold(    
-     drawer:NavBar(),
+     drawer:NavBar(userName: userName, userEmail: userEmail),
       appBar:AppBar(
-         title: Text('Restaurant Directory',style: TextStyle(  color:Colors.white,
-         fontSize: 20,
-              ),),
          backgroundColor: Colors.blueGrey,
-      ) ,
+          title: Text('Restaurant Directory',style: TextStyle(  color:Colors.white,
+         fontSize: 20,
+              ),
+      ) ,),
       body:ListView(  
          
       children:[
         SizedBox(height: 15),
        Padding(padding: const EdgeInsets.only(top: 10,left:10),
-       child: Text("Find the best restaurants for you",
+       child: Text("Find the best restaurant for you",
         style:TextStyle(
          fontSize:25,
          fontWeight: FontWeight.w500,
@@ -50,7 +57,7 @@ class Home extends StatelessWidget{
          
          Padding(padding: EdgeInsets.only(top:10,left:10),
          child: Text(
-          "Popular Restaurants",style: TextStyle(
+          "Popular Restaurant",style: TextStyle(
             fontWeight: FontWeight.w500,
             fontSize:25,
             // color: Colors.blueGrey,
@@ -448,7 +455,10 @@ class PopularWidget  extends StatelessWidget{
 }
 
 class NavBar  extends StatelessWidget{
-  const NavBar({super.key});
+   final String userName;
+  final String userEmail;
+  
+  const NavBar({Key? key, required this.userName, required this.userEmail}) : super(key: key);
 
  @override
  Widget build(BuildContext context){
@@ -458,7 +468,7 @@ class NavBar  extends StatelessWidget{
       children: [
         UserAccountsDrawerHeader(
           accountName:const Text(""), 
-          accountEmail: const Text(""),
+          accountEmail: Text(" Email : " + userEmail),
           currentAccountPicture: CircleAvatar(
             child: ClipOval(child: Image.asset('images/profile.jpg'),),
           ),
@@ -466,7 +476,7 @@ class NavBar  extends StatelessWidget{
             color: Colors.blueGrey,
           ),
           ),
-          ListTile(
+           ListTile(
             leading: Icon(Icons.info),
             title: Text('About'),
            onTap: () { Get.to(aboutPage());},
@@ -475,8 +485,7 @@ class NavBar  extends StatelessWidget{
             leading: Icon(Icons.reviews),
             title: Text('Reviews'),
              onTap: () { Get.to(ReviewPage());},
-          ),
-          ListTile(
+          ), ListTile(
             leading: Icon(Icons.restaurant_menu_sharp),
             title: Text('Cusines'),
             onTap: () { Get.to(CusinesPage());},
@@ -486,6 +495,12 @@ class NavBar  extends StatelessWidget{
             title: Text('All Directory'),
             onTap: () { Get.to(RestaurantPage());},
           ),
+            ListTile(
+            leading: Icon(Icons.location_city),
+            title: Text('Location'),
+            onTap: () { Get.to(device());},
+          ),
+          
           ListTile(
             leading: Icon(Icons.feedback),
             title: Text('Feedback'),
@@ -494,7 +509,7 @@ class NavBar  extends StatelessWidget{
           
           ListTile(
             leading: Icon(Icons.logout),
-            title: Text('Signout'),
+            title: Text('Logout'),
            onTap: () { Get.to(Main());},
           ),
 
@@ -527,7 +542,7 @@ class AllWidget extends StatelessWidget{
               children: [
               SizedBox(height:10), 
            ElevatedButton(
-            child: Text("All Directory",style: TextStyle( fontSize:17.0,
+            child: Text("All",style: TextStyle( fontSize:23.0,
             fontWeight: FontWeight.bold,color:Colors.white),),
             
             onPressed: () =>Get.to(RestaurantPage()),
@@ -551,7 +566,7 @@ class AllWidget extends StatelessWidget{
                
             SizedBox(height:10),  
            ElevatedButton(
-            child: Text("Cusines",style: TextStyle( fontSize:17.0,
+            child: Text("Cusines",style: TextStyle( fontSize:23.0,
             fontWeight: FontWeight.bold,color:Colors.white),),
             
             onPressed: () =>Get.to(CusinesPage()),
@@ -575,7 +590,7 @@ class AllWidget extends StatelessWidget{
 
               SizedBox(height:10), 
            ElevatedButton(
-            child: Text("Location",style: TextStyle( fontSize:17.0,
+            child: Text("Location",style: TextStyle( fontSize:23.0,
             fontWeight: FontWeight.bold,color:Colors.white),),
             
             onPressed: () =>Get.to(device()),

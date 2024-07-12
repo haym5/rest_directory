@@ -24,14 +24,26 @@ class CusinesPage extends StatelessWidget{
     return Scaffold(
       
       appBar:AppBar(
-       title: Text('Restaurant directory',style: TextStyle( color:Colors.white, fontSize: 20,),),
+       title: Text('Restaurant Directory',style: TextStyle( color:Colors.white, fontSize: 20,),),
          backgroundColor: Colors.blueGrey,
               
       ) ,
       
        body: ListView(
         children: [
-           SizedBox(height: 20),            
+            SizedBox(height: 10), 
+           Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+           Image(
+          image:AssetImage('images/menu.png',),
+           width: 50,
+          height:50,
+          fit: BoxFit.contain,
+          ),
+          SizedBox(width: 10),
+          Text("Type of Cusines",style: TextStyle(fontSize: 25,fontWeight: FontWeight.w500),),], ), 
+           SizedBox(height: 15),          
           ListTile(                
             title: Text('Burmese cusines',
             style: TextStyle(fontSize:16,

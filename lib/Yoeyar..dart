@@ -6,7 +6,7 @@ class yoeyarPage extends StatelessWidget{
  Widget build(BuildContext context){
   return Scaffold(
     appBar:AppBar(
-      title: Text('Restaurant directory',style: TextStyle( color:Colors.white,fontSize: 20),),
+      title: Text('Restaurant Directory',style: TextStyle( color:Colors.white,fontSize: 20),),
          backgroundColor: Colors.blueGrey,
       ) ,
     body: Center(

@@ -30,16 +30,14 @@ class _ThaiState extends State<Thai> {
       name: 'Mai Thai',
       image: AssetImage("images/maithai.jpg"),
       address:'Add:No 197 1-3, West Shwe Gone Dine,5th st,Bahan,Yangon',
-      phone:'Tel:+951 383 662',
-     
+      phone:'Tel:+951 383 662',   
       
     ),
      ThaiCusines(
       name: 'Royal Jasmine Authentic Thai Cuisine',
       image: AssetImage("images/Royal.jpg"),
       address:'Add:Diamond Condo,Corner of Pyay Rd &Narnataw Rd Ground Floor,Tower E,Yangon',
-      phone:'Tel:+959 964 496 365',
-     
+      phone:'Tel:+959 964 496 365',   
       
     ),
      ThaiCusines(
@@ -51,7 +49,7 @@ class _ThaiState extends State<Thai> {
        ThaiCusines(
       name: 'Jeff Kitchen',
       image: AssetImage("images/jef.jpg"),
-      address:'Add:4A,Kan Yeik Thar Street,Chaw Twin Gone,Mayangone Tsp,Yangon',
+      address:'Add:4A,Kan Yeik Thar Street,Chaw Twin Gone,Mayangone ,Yangon',
       phone:'Tel:+959 265 900 056',
       ),
         ThaiCusines(
@@ -69,7 +67,7 @@ class _ThaiState extends State<Thai> {
      ThaiCusines(
       name: 'Thai Kitchen Restaurant',
       image: AssetImage("images/thai kit.jpg"),
-      address:'Add:No.15 Than Ta Man Street Dagon Tsp,Yangon',
+      address:'Add:No.15 Than Ta Man Street ,Dagon ,Yangon',
       phone:'Tel:+959 861 3400',
       ),
        ThaiCusines(
@@ -108,9 +106,7 @@ class _ThaiState extends State<Thai> {
       body: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.all(8.0),
-           
-          
+            padding: const EdgeInsets.all(8.0),        
             child: TextField(
               onChanged: (value) {
                 setState(() {
@@ -123,8 +119,7 @@ class _ThaiState extends State<Thai> {
                 border:OutlineInputBorder(                 
                  borderRadius: BorderRadius.circular(10),                             
              
-                ),                
-                
+                ),                              
                 ),
               ),
           ),

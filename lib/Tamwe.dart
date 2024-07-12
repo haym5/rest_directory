@@ -13,51 +13,51 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home:sanchaung(),
+      home:tamwe(),
     );
   }
 }
 
-class sanchaung extends StatefulWidget {
+class tamwe extends StatefulWidget {
   @override
-  _sanchaungState createState() => _sanchaungState();
+  _tamweState createState() => _tamweState();
 }
 
-class _sanchaungState extends State<sanchaung> {
-  final List<Sanres> cusines = [
+class _tamweState extends State<tamwe> {
+  final List<tares> cusines = [
        
-       Sanres(
-      name: 'Pork Queen Restaurant',
-      image: AssetImage("images/pork.jpg"),
-      address:'Add:11111,Shin Sawpu Pagoda St,Sanchaung,Yangon',
-      phone:'Tel:+959 754 628 018',
+       tares(
+       name: 'Family SUSHI',
+      image: AssetImage("images/fa1.jpg"),
+      address:'Add:Room 104,Building 27,U Chit Maung Housing,U Chit Maung St,Tamwe,Yangon',
+      phone:'Tel:+959 731 194 56',
       ),
-    
-       Sanres(
-      name: 'Sopyae Shan Noodle Restaurant',
-      image: AssetImage("images/shan7.jpg"),
-      address:'Add:No. 26, Shan Kone Street ,SanChaung , Yangon',
-      phone:'Tel:+959 772 523139',
-      ),
-      Sanres(
-      name: 'Xi Yang Yang',
-      image: AssetImage("images/xi1.jpg"),
-      address:'Add:No.14,Nyaung Tong Rd,SanChaung Township,Yangon',
-      phone:'Tel:+951 502 582',    
-    ),
-      Sanres(
-      name: 'Swel Restaurant',
-      image: AssetImage("images/sh.jpg"),
-      address:'Add:No 7 Sanchaung Township, Baho Rd, Yangon 11111',
-      phone:'Tel:09 881 507700',    
-    ),
-     Sanres(
-      name: 'Sumlut Sisters BBQ',
-      image: AssetImage("images/min.jpg"),
-      address:'Add:13 Sanchaung St, Yangon',
-      phone:'Tel: 09 762 502990',    
-    ),
 
+      tares(
+      name: 'Foodfare',
+      image: AssetImage("images/ind6.jpg"),
+      address:'Add:102/104,Kyaik Ka San Rd,Tamwe Township,Yangon',
+      phone:'Tel:+959 770 099 637',
+      
+    ),
+      tares(
+      name: 'Purple Palace Rooftop Restaurant',
+      image: AssetImage("images/fu1.jpg"),
+      address:'Add:No-4 E Horse Race Course Rd,Tamwe, Yangon 11211',
+      phone:'Tel: 09 779 657144',
+      ),
+      tares(
+      name: 'Shwe Khit',
+      image: AssetImage("images/it7.jpg"),
+      address:'Add:NO-24,Tamwe ,Zay Haung street,Yangon',
+      phone:'',
+      ),
+       tares(
+      name: 'Osushi Tamwe',
+      image: AssetImage("images/royal.jpg"),
+      address:'Add: no.44 corner of Thamain Bayan Street and, Dhamma Darna Street, Yangon ',
+      phone:'09 766 001557',
+      ),
   ];
  String searchText = '';
  
@@ -122,7 +122,7 @@ class _sanchaungState extends State<sanchaung> {
 }
 
 class ItemDetailsPage extends StatelessWidget {
-  final Sanres item;
+  final tares item;
 
   const ItemDetailsPage({required this.item});
 
@@ -138,7 +138,7 @@ class ItemDetailsPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[          
               
-               if  (item.name == 'Pork Queen Restaurant')
+               if  (item.name == 'Family SUSHI')
               Container(
                 width: 300,
                 height: 300,
@@ -158,67 +158,7 @@ class ItemDetailsPage extends StatelessWidget {
                   ],
                 ),
               )
-              else if  (item.name == 'Sopyae Shan Noodle Restaurant')
-              Container(
-                width: 300,
-                height: 300,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: item.image,
-                    fit: BoxFit.cover,
-                  ),
-                  borderRadius: BorderRadius.circular(20),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.withOpacity(0.2),
-                      spreadRadius: 5,
-                      blurRadius: 7,
-                      offset: Offset(0, 3),
-                    ),
-                  ],
-                ),
-              )
-               else if  (item.name == 'Xi Yang Yang')
-              Container(
-                width: 300,
-                height: 300,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: item.image,
-                    fit: BoxFit.cover,
-                  ),
-                  borderRadius: BorderRadius.circular(20),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.withOpacity(0.2),
-                      spreadRadius: 5,
-                      blurRadius: 7,
-                      offset: Offset(0, 3),
-                    ),
-                  ],
-                ),
-              )
-             else if  (item.name == 'Swel Restaurant')
-              Container(
-                width: 300,
-                height: 300,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: item.image,
-                    fit: BoxFit.cover,
-                  ),
-                  borderRadius: BorderRadius.circular(20),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.withOpacity(0.2),
-                      spreadRadius: 5,
-                      blurRadius: 7,
-                      offset: Offset(0, 3),
-                    ),
-                  ],
-                ),
-              )
-              else if  (item.name == 'Sumlut Sisters BBQ')
+               else if  (item.name == 'Foodfare')
               Container(
                 width: 300,
                 height: 300,
@@ -239,6 +179,67 @@ class ItemDetailsPage extends StatelessWidget {
                 ),
               )
               
+               else if  (item.name == 'Purple Palace Rooftop Restaurant')
+              Container(
+                width: 300,
+                height: 300,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: item.image,
+                    fit: BoxFit.cover,
+                  ),
+                  borderRadius: BorderRadius.circular(20),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.2),
+                      spreadRadius: 5,
+                      blurRadius: 7,
+                      offset: Offset(0, 3),
+                    ),
+                  ],
+                ),
+              )
+              
+               else if  (item.name == 'Shwe Khit')
+              Container(
+                width: 300,
+                height: 300,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: item.image,
+                    fit: BoxFit.cover,
+                  ),
+                  borderRadius: BorderRadius.circular(20),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.2),
+                      spreadRadius: 5,
+                      blurRadius: 7,
+                      offset: Offset(0, 3),
+                    ),
+                  ],
+                ),
+              )
+               else if  (item.name == 'Osushi Tamwe')
+              Container(
+                width: 300,
+                height: 300,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: item.image,
+                    fit: BoxFit.cover,
+                  ),
+                  borderRadius: BorderRadius.circular(20),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.2),
+                      spreadRadius: 5,
+                      blurRadius: 7,
+                      offset: Offset(0, 3),
+                    ),
+                  ],
+                ),
+              )
             else 
               Image(image: item.image),
             SizedBox(height: 20),
@@ -253,13 +254,13 @@ class ItemDetailsPage extends StatelessWidget {
   }
 }
 
-class Sanres {
+class tares {
   final String name;
   final ImageProvider image;
    final String address;
   final String phone;
 
-  Sanres({
+  tares({
     required this.name,
     required this.address,
     required this.image,

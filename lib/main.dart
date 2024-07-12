@@ -2,16 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:restaurant/login.dart';
 
-void main() => runApp(GetMaterialApp(home: Main()));
+void main() => runApp(GetMaterialApp(
+  debugShowCheckedModeBanner: false,
+  home: Main()));
 
 class Main extends StatelessWidget {
 
   Widget build( BuildContext context ){
     return Scaffold(
+
                appBar:AppBar(
                title: Text('Restaurant Directory',style: TextStyle(  color:Colors.white
               ),),
-         backgroundColor: Colors.blueGrey,
+              backgroundColor: Colors.blueGrey,
            
       ) ,
         body:Container(     

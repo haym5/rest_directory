@@ -55,7 +55,7 @@ class _ItalianState extends State<Italian> {
       phone:'Tel:+951 525 935',
       ),
        ItalianCusines(
-      name: 'The Ritz Italian Restaurant Yangon',
+      name: 'The Ritz Italian Restaurant ',
       image: AssetImage("images/it5.jpg"),
       address:'Add61 University Avenue,Bahan Township,Yangon',
       phone:'Tel:+959 446 656 925',

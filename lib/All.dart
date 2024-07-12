@@ -128,7 +128,7 @@ class _RestaurantPageState extends State<RestaurantPage> {
 
     return Scaffold(
       appBar: AppBar(
-         title: Text('Restaurant directory',style: TextStyle( color:Colors.white, fontSize: 20,),),
+         title: Text('Restaurant Directory',style: TextStyle( color:Colors.white, fontSize: 20,),),
          backgroundColor: Colors.blueGrey,
               
       ) ,

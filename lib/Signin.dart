@@ -20,7 +20,7 @@ class _SigninPageState extends State<SigninPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-         title: Text('Restaurant directory',style: TextStyle( color:Colors.white),),
+         title: Text('Restaurant Directory',style: TextStyle( color:Colors.white),),
         backgroundColor: Colors.blueGrey,
        // centerTitle: true,
        
@@ -112,8 +112,8 @@ class _SigninPageState extends State<SigninPage> {
                             context,
                             MaterialPageRoute(
                               builder: (context) => Home(
-                               // userName: userName,
-                               // userEmail: userEmail,
+                                userName: userName,
+                                userEmail: userEmail,
                               ),
                             ),
                             (Route<dynamic> route) => false, // Clear all routes on stack

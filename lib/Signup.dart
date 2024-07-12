@@ -21,7 +21,7 @@ class _SignupPageState extends State<SignupPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-         title: Text('Restaurant directory',style: TextStyle( color:Colors.white),),
+         title: Text('Restaurant Directory',style: TextStyle( color:Colors.white),),
         backgroundColor: Colors.blueGrey,      
        
       ),
@@ -134,8 +134,8 @@ class _SignupPageState extends State<SignupPage> {
                               context,
                               MaterialPageRoute(
                                 builder: (context) => Home(
-                                  //userName: email, // You can pass email or name here
-                                  //userEmail: email,
+                                  userName: email, // You can pass email or name here
+                                   userEmail: email,
                                 ),
                               ),
                             );

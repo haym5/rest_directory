@@ -13,51 +13,51 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home:sanchaung(),
+      home:yankin(),
     );
   }
 }
 
-class sanchaung extends StatefulWidget {
+class yankin extends StatefulWidget {
   @override
-  _sanchaungState createState() => _sanchaungState();
+  _yankinState createState() => _yankinState();
 }
 
-class _sanchaungState extends State<sanchaung> {
-  final List<Sanres> cusines = [
+class _yankinState extends State<yankin> {
+  final List<yanres> cusines = [
        
-       Sanres(
-      name: 'Pork Queen Restaurant',
-      image: AssetImage("images/pork.jpg"),
-      address:'Add:11111,Shin Sawpu Pagoda St,Sanchaung,Yangon',
-      phone:'Tel:+959 754 628 018',
+       yanres(
+       name: 'Cho Japanese Dining & Bar',
+      image: AssetImage("images/cho1.jpg"),
+      address:'Add:No.1,Kaba Ayr Pagoda Rd,Yankin Township,Yangon',
+      phone:'Tel:+959 258 322 223',
       ),
-    
-       Sanres(
-      name: 'Sopyae Shan Noodle Restaurant',
-      image: AssetImage("images/shan7.jpg"),
-      address:'Add:No. 26, Shan Kone Street ,SanChaung , Yangon',
-      phone:'Tel:+959 772 523139',
-      ),
-      Sanres(
-      name: 'Xi Yang Yang',
-      image: AssetImage("images/xi1.jpg"),
-      address:'Add:No.14,Nyaung Tong Rd,SanChaung Township,Yangon',
-      phone:'Tel:+951 502 582',    
-    ),
-      Sanres(
-      name: 'Swel Restaurant',
-      image: AssetImage("images/sh.jpg"),
-      address:'Add:No 7 Sanchaung Township, Baho Rd, Yangon 11111',
-      phone:'Tel:09 881 507700',    
-    ),
-     Sanres(
-      name: 'Sumlut Sisters BBQ',
-      image: AssetImage("images/min.jpg"),
-      address:'Add:13 Sanchaung St, Yangon',
-      phone:'Tel: 09 762 502990',    
-    ),
 
+      yanres(
+      name: 'Ember Japanese Restaurant and Bar',
+      image: AssetImage("images/emb1.jpg"),
+      address:'Add:Corner of Kaba Aye Pagoda Rd & Kan Bae Rd shop 20/21,Yankin Township, U Wisara Rd, Yangon',
+      phone:'Tel:+959 777 1786 30',
+      
+    ),
+      yanres(
+      name: 'Orzo Restaurant',
+      image: AssetImage("images/it2.jpg"),
+      address:'Add:Sedona Hotel No.1 Kaba Aye Pagoda Rd,Yankin Township,Yangon',
+      phone:'Tel:+951 8605377',
+      ),
+      yanres(
+      name: 'Cafe Dibar',
+      image: AssetImage("images/it7.jpg"),
+      address:'Add:9 Kaba Aye Pagoda Rd,Yankin Township,Yangon',
+      phone:'Tel:+959 500 6143',
+      ),
+       yanres(
+      name: 'The Lord',
+      image: AssetImage("images/cho1.jpg"),
+      address:'Add:16, Aung Zeya Rd., Ward (13), Yankin Township, Yangon ',
+      phone:'',
+      ),
   ];
  String searchText = '';
  
@@ -122,7 +122,7 @@ class _sanchaungState extends State<sanchaung> {
 }
 
 class ItemDetailsPage extends StatelessWidget {
-  final Sanres item;
+  final yanres item;
 
   const ItemDetailsPage({required this.item});
 
@@ -138,7 +138,7 @@ class ItemDetailsPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[          
               
-               if  (item.name == 'Pork Queen Restaurant')
+               if  (item.name == 'Cho Japanese Dining & Bar')
               Container(
                 width: 300,
                 height: 300,
@@ -158,67 +158,7 @@ class ItemDetailsPage extends StatelessWidget {
                   ],
                 ),
               )
-              else if  (item.name == 'Sopyae Shan Noodle Restaurant')
-              Container(
-                width: 300,
-                height: 300,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: item.image,
-                    fit: BoxFit.cover,
-                  ),
-                  borderRadius: BorderRadius.circular(20),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.withOpacity(0.2),
-                      spreadRadius: 5,
-                      blurRadius: 7,
-                      offset: Offset(0, 3),
-                    ),
-                  ],
-                ),
-              )
-               else if  (item.name == 'Xi Yang Yang')
-              Container(
-                width: 300,
-                height: 300,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: item.image,
-                    fit: BoxFit.cover,
-                  ),
-                  borderRadius: BorderRadius.circular(20),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.withOpacity(0.2),
-                      spreadRadius: 5,
-                      blurRadius: 7,
-                      offset: Offset(0, 3),
-                    ),
-                  ],
-                ),
-              )
-             else if  (item.name == 'Swel Restaurant')
-              Container(
-                width: 300,
-                height: 300,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: item.image,
-                    fit: BoxFit.cover,
-                  ),
-                  borderRadius: BorderRadius.circular(20),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.withOpacity(0.2),
-                      spreadRadius: 5,
-                      blurRadius: 7,
-                      offset: Offset(0, 3),
-                    ),
-                  ],
-                ),
-              )
-              else if  (item.name == 'Sumlut Sisters BBQ')
+               else if  (item.name == 'Ember Japanese Restaurant and Bar')
               Container(
                 width: 300,
                 height: 300,
@@ -239,6 +179,67 @@ class ItemDetailsPage extends StatelessWidget {
                 ),
               )
               
+               else if  (item.name == 'Orzo Restaurant')
+              Container(
+                width: 300,
+                height: 300,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: item.image,
+                    fit: BoxFit.cover,
+                  ),
+                  borderRadius: BorderRadius.circular(20),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.2),
+                      spreadRadius: 5,
+                      blurRadius: 7,
+                      offset: Offset(0, 3),
+                    ),
+                  ],
+                ),
+              )
+              
+               else if  (item.name == 'Cafe Dibar')
+              Container(
+                width: 300,
+                height: 300,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: item.image,
+                    fit: BoxFit.cover,
+                  ),
+                  borderRadius: BorderRadius.circular(20),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.2),
+                      spreadRadius: 5,
+                      blurRadius: 7,
+                      offset: Offset(0, 3),
+                    ),
+                  ],
+                ),
+              )
+               else if  (item.name == 'The Lord')
+              Container(
+                width: 300,
+                height: 300,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: item.image,
+                    fit: BoxFit.cover,
+                  ),
+                  borderRadius: BorderRadius.circular(20),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.2),
+                      spreadRadius: 5,
+                      blurRadius: 7,
+                      offset: Offset(0, 3),
+                    ),
+                  ],
+                ),
+              )
             else 
               Image(image: item.image),
             SizedBox(height: 20),
@@ -253,13 +254,13 @@ class ItemDetailsPage extends StatelessWidget {
   }
 }
 
-class Sanres {
+class yanres {
   final String name;
   final ImageProvider image;
    final String address;
   final String phone;
 
-  Sanres({
+  yanres({
     required this.name,
     required this.address,
     required this.image,
